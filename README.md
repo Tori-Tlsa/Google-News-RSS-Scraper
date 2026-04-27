@@ -1,15 +1,22 @@
-# Google News RSS Scraper
+# 📰 Google News RSS Scraper
 
-특정 기간과 키워드를 기반으로 구글 뉴스 기사를 수집하여 엑셀(`.xlsx`)로 추출하는 Python CLI 툴입니다.
+특정 기간과 다중 키워드를 기반으로 구글 뉴스(Google News) 기사를 수집하여 엑셀(`.xlsx`) 파일로 자동 추출하는 Python CLI 도구입니다.
 
-## Features
-- **대화형 CLI**: 실행 시 터미널에서 시작일, 종료일, 다중 키워드를 직접 입력받아 구동합니다.
-- **중복 제거**: 수집된 기사 중 제목이 동일한 기사를 자동으로 필터링합니다.
-- **자동 폴더 분류**: 수집 완료 시 `results` 폴더를 자동 생성하고 엑셀 파일을 저장합니다.
+## ✨ 주요 기능 (Features)
 
-## Installation
+- **대화형 인터페이스(CLI)**: 코드 수정 없이 터미널에서 질문에 답하는 형식으로 손쉽게 조건 설정이 가능합니다.
+- **유연한 날짜 지정**: `YYYY,MM,DD` 형식으로 수집 기간을 설정하며, 시작일과 종료일이 뒤바뀌어 입력되어도 자동으로 보정합니다.
+- **다중 키워드 지원**: 쉼표(`,`)로 구분하여 여러 개의 관심 키워드를 한 번에 검색할 수 있습니다.
+- **자동 중복 제거**: 검색된 기사 중 제목이 동일한 기사(중복 기사)를 자동으로 필터링합니다.
+- **스마트 저장**: 실행 시 `results/` 폴더를 자동 생성하고, 수집된 기간을 파일명에 포함하여 엑셀 파일로 저장합니다.
 
-1. 저장소 클론 및 폴더 이동
-```bash
-git clone [https://github.com/YourUsername/google-news-scraper.git](https://github.com/YourUsername/google-news-scraper.git)
-cd google-news-scraper
+---
+
+## 📂 프로젝트 구조 (Project Structure)
+
+```text
+google-news-scraper/
+├── main.py              # 메인 실행 스크립트
+├── requirements.txt     # 의존성 패키지 목록
+├── .gitignore           # Git 제외 파일 목록
+└── README.md            # 프로젝트 설명서
